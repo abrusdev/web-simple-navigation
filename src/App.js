@@ -1,9 +1,8 @@
-function App() {
+import AccordionPage from "./pages/AccordionPage";
 
+function App() {
   return (
-    <div>
-      Working
-    </div>
+    <AccordionPage />
   )
 }
 
