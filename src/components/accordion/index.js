@@ -19,6 +19,8 @@ function Accordion({ items }) {
       <span className="text-xl">{isExpanded ? <GoChevronDown /> : <GoChevronLeft />}</span>
     );
 
+    const contentClasses = (isExpanded) ? "border-b p-5" : "border-b p-5 hidden";
+
     return (
       <div key={item.id} style={{ width: 500 }}>
         <div className="flex justify-between p-3 bg-gray-50 border-b items-center cursor-pointer"
@@ -26,7 +28,7 @@ function Accordion({ items }) {
           {item.label}
           {icon}
         </div>
-        {isExpanded && <div className="border-b p-5">{item.content}</div>}
+        <div className={contentClasses}>{item.content}</div>
       </div>
     );
   });
