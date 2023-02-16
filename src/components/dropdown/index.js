@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 import { GoChevronDown } from "react-icons/go";
+import Panel from "../panel";
 
 function DropDown({ options, selection, onSelect }) {
 
@@ -26,12 +27,12 @@ function DropDown({ options, selection, onSelect }) {
 
   return (
     <div className="w-48 relative">
-      <span className="flex justify-between items-center cursor-pointer border rounded p-3 shadow bg-white w-full"
-            onClick={handleSelectClick}>
+      <Panel className="flex justify-between items-center cursor-pointer"
+             onClick={handleSelectClick}>
         {selection?.name || "Select..."}
-        <GoChevronDown className="text-lg"/>
-      </span>
-      {isOpen && <div className="absolute top-full border shadow bg-white w-full">{renderedItems}</div>}
+        <GoChevronDown className="text-lg" />
+      </Panel>
+      {isOpen && <Panel className="absolute top-full">{renderedItems}</Panel>}
     </div>
   )
 }
