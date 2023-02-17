@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import { useEffect } from "react";
 
 function Panel({ children, className, ...rest }) {
   const finalClassNames = classNames(
@@ -7,7 +8,7 @@ function Panel({ children, className, ...rest }) {
   )
 
   return (
-    <div className={finalClassNames} {...rest}>{children}</div>
+    <div id='hello' className={finalClassNames} {...rest}>{children}</div>
   )
 }
 
