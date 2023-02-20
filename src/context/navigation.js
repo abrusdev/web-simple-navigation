@@ -19,7 +19,7 @@ const NavigationProvider = ({ children }) => {
 
   const navigate = (to) => {
     window.history.pushState({}, '', to)
-    setPath(path)
+    setPath(to)
   }
 
   return (
