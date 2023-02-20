@@ -5,4 +5,4 @@ function useNavigation() {
   return useContext(NavigationContext)
 }
 
-export default NavigationContext;
+export default useNavigation;
