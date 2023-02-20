@@ -1,10 +1,14 @@
-import AccordionPage from "./pages/AccordionPage";
+import NavigationContext, { NavigationProvider } from './context/navigation'
+import { useContext } from "react";
 import DropDownPage from "./pages/DropDownPage";
-import { useEffect } from "react";
 
 function App() {
+
+
   return (
-    <DropDownPage />
+    <div>
+      {useContext(NavigationContext) === '/' && <DropDownPage />}
+    </div>
   )
 }
 
